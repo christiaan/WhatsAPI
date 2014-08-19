@@ -25,7 +25,7 @@ abstract class AbstractWhatsAppDaemonEventListener implements WhatsAppEventListe
 
     protected function outputEvent($name, array $data)
     {
-        fwrite($this->output, json_encode(array('name' => $name, 'data' => $data)));
+        fwrite($this->output, json_encode(array('name' => $name, 'data' => $data)) . "\n");
     }
 
     function onDaemonStop($signal)
