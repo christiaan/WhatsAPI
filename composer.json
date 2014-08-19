@@ -12,7 +12,8 @@
     "autoload": {
         "classmap": [
             "src/whatsprot.class.php",
-            "src/events"
+            "src/events",
+            "src/daemon"
         ]
     },
     "require": {
