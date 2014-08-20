@@ -18,9 +18,9 @@ abstract class AbstractWhatsAppDaemonEventListener implements WhatsAppEventListe
         $this->output = $output;
     }
 
-    public function listenTo(WhatsProt $wa)
+    public function listenTo(WhatsAppEvent $eventManager)
     {
-        $wa->eventManager()->addEventListener($this);
+        $eventManager->addEventListener($this);
     }
 
     protected function outputEvent($name, array $data)

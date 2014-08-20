@@ -41,7 +41,7 @@ final class WhatsAppDaemon
 
         $this->wa = new WhatsProt($this->phoneNumber, null, 'WhatsApp', false);
         $eventListener = new WhatsAppDaemonEventListener($output);
-        $eventListener->listenTo($this->wa);
+        $eventListener->listenTo($this->wa->eventManager());
         $this->eventListener = $eventListener;
 
         $this->commandHandler = new WhatsAppDaemonCommandHandler($this->wa);
